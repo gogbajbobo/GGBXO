@@ -14,9 +14,18 @@
 
 @implementation GGBXOGameVC
 
+
+#pragma mark - view lifecycle
+
+- (void)customInit {
+    self.title = self.playVsAI ? @"playVsAI" : @"playVsHuman";
+}
+
 - (void)viewDidLoad {
+
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    [self customInit];
+
 }
 
 - (void)didReceiveMemoryWarning {
