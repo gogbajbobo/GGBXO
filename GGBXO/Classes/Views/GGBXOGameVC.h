@@ -1,5 +1,5 @@
 //
-//  BBGXOGameVC.h
+//  GGBXOGameVC.h
 //  GGBXO
 //
 //  Created by Maxim Grigoriev on 01/06/2017.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface BBGXOGameVC : UIViewController
+@interface GGBXOGameVC : UIViewController
 
 @end

@@ -92,7 +92,7 @@
         <!--GameVC-->
         <scene sceneID="6Bd-KU-bXv">
             <objects>
-                <viewController id="2Ba-op-0uU" customClass="BBGXOGameVC" sceneMemberID="viewController">
+                <viewController id="2Ba-op-0uU" customClass="GGBXOGameVC" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ADQ-Q6-YpD"/>
                         <viewControllerLayoutGuide type="bottom" id="qkO-aX-DiU"/>

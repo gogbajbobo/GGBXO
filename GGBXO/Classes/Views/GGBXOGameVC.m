@@ -1,18 +1,18 @@
 //
-//  BBGXOGameVC.m
+//  GGBXOGameVC.m
 //  GGBXO
 //
 //  Created by Maxim Grigoriev on 01/06/2017.
 //  Copyright © 2017 Maxim Grigoriev. All rights reserved.
 //
 
-#import "BBGXOGameVC.h"
+#import "GGBXOGameVC.h"
 
-@interface BBGXOGameVC ()
+@interface GGBXOGameVC ()
 
 @end
 
-@implementation BBGXOGameVC
+@implementation GGBXOGameVC
 
 - (void)viewDidLoad {
     [super viewDidLoad];
