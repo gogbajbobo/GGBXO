@@ -17,9 +17,25 @@
 
 @implementation GGBXOMenuVC
 
+
+#pragma mark - view lifecycle
+
+- (void)customInit {
+    
+    UIBarButtonItem *backButton = [[UIBarButtonItem alloc] initWithTitle:@"Back"
+                                                                   style:UIBarButtonItemStylePlain
+                                                                  target:nil
+                                                                  action:nil];
+    
+    self.navigationItem.backBarButtonItem = backButton;
+
+}
+
 - (void)viewDidLoad {
+    
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    [self customInit];
+
 }
 
 - (void)didReceiveMemoryWarning {
