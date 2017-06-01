@@ -270,6 +270,7 @@
 		2C6980011EDF1111006E50FC /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = GGBXO;
 				LastUpgradeCheck = 0830;
 				ORGANIZATIONNAME = "Maxim Grigoriev";
 				TargetAttributes = {
