@@ -14,11 +14,12 @@
 
 @protocol GGBGame <NSObject>
 
-@property (nonatomic, strong, readonly) NSArray <id <GGBPlayer>> *players;
+@property (nonatomic, strong) NSArray <id <GGBPlayer>> *players;
 @property (nonatomic, strong, readonly) id <GGBPlayer> currentPlayer;
 @property (nonatomic, strong, readonly) NSArray <id <GGBMove>> *gameHistory;
 
-- (BOOL)startGameWithPlayers:(NSArray <id <GGBPlayer>> *)players;
++ (instancetype)gameWithPlayers:(NSArray <id <GGBPlayer>> *)players;
+
 - (BOOL)newMove:(id <GGBMove>)gameMove;
 
 

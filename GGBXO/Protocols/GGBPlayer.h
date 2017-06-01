@@ -13,8 +13,9 @@
 @property (nonatomic, strong) NSString *name;
 @property (nonatomic, strong) NSUUID *playerId;
 @property (nonatomic) NSUInteger position;
+@property (nonatomic) BOOL isBot;
 
-- (instancetype)playerWithName:(NSString *)name
++ (instancetype)playerWithName:(NSString *)name
                       playerId:(NSUUID *)playerId;
 
 - (void)haveToMakeMove;
