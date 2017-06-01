@@ -10,4 +10,7 @@
 
 @interface GGBXOGameVC : UIViewController
 
+@property (nonatomic) BOOL playVsAI;
+
+
 @end
