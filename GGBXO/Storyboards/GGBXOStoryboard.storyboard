@@ -21,25 +21,25 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O71-zH-e2I">
-                                <rect key="frame" x="125" y="269" width="70" height="30"/>
-                                <state key="normal" title="Play vs. AI"/>
-                                <connections>
-                                    <segue destination="2Ba-op-0uU" kind="show" identifier="playVsAI" id="dXc-NU-jfM"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dwb-xi-fKS">
                                 <rect key="frame" x="108" y="189" width="105" height="30"/>
                                 <state key="normal" title="Play vs. Human"/>
                                 <connections>
-                                    <segue destination="2Ba-op-0uU" kind="show" identifier="playVsHuman" id="RgD-m0-wWB"/>
+                                    <segue destination="2Ba-op-0uU" kind="show" identifier="about" id="RgD-m0-wWB"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="csB-D2-C78">
                                 <rect key="frame" x="139" y="349" width="42" height="30"/>
                                 <state key="normal" title="About"/>
                                 <connections>
-                                    <segue destination="Bur-N8-EpQ" kind="show" id="Pfc-EE-a8z"/>
+                                    <segue destination="Bur-N8-EpQ" kind="show" identifier="playVsBot" id="Pfc-EE-a8z"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O71-zH-e2I">
+                                <rect key="frame" x="120" y="269" width="80" height="30"/>
+                                <state key="normal" title="Play vs. Bot"/>
+                                <connections>
+                                    <segue destination="2Ba-op-0uU" kind="show" identifier="playVsHuman" id="dXc-NU-jfM"/>
                                 </connections>
                             </button>
                         </subviews>
