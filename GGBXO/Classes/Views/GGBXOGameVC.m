@@ -10,10 +10,29 @@
 
 @interface GGBXOGameVC ()
 
+@property (nonatomic, strong) NSMutableArray <NSValue *> *fieldViews;
+
 @end
+
 
 @implementation GGBXOGameVC
 
+- (NSMutableArray *)fieldViews {
+    
+    if (!_fieldViews) {
+        _fieldViews = @[].mutableCopy;
+    }
+    return _fieldViews;
+    
+}
+
+- (void)tapOnView:(UITapGestureRecognizer *)tap {
+
+    CGPoint field = self.fieldViews[tap.view.tag].CGPointValue;
+    
+    NSLog(@"field %@ %@", @(field.x), @(field.y));
+    
+}
 
 - (void)drawGameField {
     
@@ -30,6 +49,8 @@
     CGFloat fieldWidth = imageW * fieldXCount + paddingX * (fieldXCount - 1);
     CGFloat fieldHeight = imageH * fieldYCount + paddingY * (fieldYCount - 1);
     
+    NSInteger tag = 0;
+    
     for (NSUInteger i = 0; i < fieldXCount; i++) {
 
         CGFloat x = (imageW + paddingX) * i;
@@ -43,10 +64,17 @@
             
             CGPoint center = CGPointMake(viewX, viewY);
             
-            NSLog(@"center %@ %@", @(center.x), @(center.y));
+            NSValue *value = [NSValue valueWithCGPoint:CGPointMake(i, j)];
+            self.fieldViews[tag] = value;
+
+            UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self
+                                                                                  action:@selector(tapOnView:)];
             
             UIImageView *view = [[UIImageView alloc]  initWithImage:image];
             view.center = center;
+            view.tag = tag++;
+            view.userInteractionEnabled = YES;
+            [view addGestureRecognizer:tap];
             
             [self.view addSubview:view];
             
