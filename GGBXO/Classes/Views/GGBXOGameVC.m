@@ -12,6 +12,7 @@
 
 @property (nonatomic, strong) NSMutableArray <NSValue *> *fieldViews;
 
+
 @end
 
 
@@ -89,7 +90,7 @@
 
 - (void)customInit {
     
-    self.title = self.playVsAI ? @"playVsAI" : @"playVsHuman";
+    self.title = self.playVsBot ? @"playVsBot" : @"playVsHuman";
     [self drawGameField];
     
 }

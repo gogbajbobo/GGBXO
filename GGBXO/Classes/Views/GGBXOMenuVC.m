@@ -51,7 +51,7 @@
     if (![segue.destinationViewController isKindOfClass:[GGBXOGameVC class]]) return;
     
     GGBXOGameVC *gameVC = (GGBXOGameVC *)segue.destinationViewController;
-    gameVC.playVsAI = [segue.identifier isEqualToString:@"playVsAI"];
+    gameVC.playVsBot = [segue.identifier isEqualToString:@"playVsBot"];
     
 }
 

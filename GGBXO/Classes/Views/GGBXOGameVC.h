@@ -10,7 +10,7 @@
 
 @interface GGBXOGameVC : UIViewController
 
-@property (nonatomic) BOOL playVsAI;
+@property (nonatomic) BOOL playVsBot;
 
 
 @end
