@@ -15,10 +15,38 @@
 @implementation GGBXOGameVC
 
 
+- (void)drawGameField {
+    
+    UIImage *image = [UIImage imageNamed:@"XO.png"];
+    
+    CGFloat paddingX = image.size.width / 4;
+    CGFloat paddingY = image.size.height / 4;
+    NSUInteger fieldHeight = 3;
+    NSUInteger fieldWidth = 3;
+    
+    for (NSUInteger i = 0; i < fieldWidth; i++) {
+
+        for (NSUInteger j = 0; j < fieldHeight; j++) {
+            
+            UIImageView *view = [[UIImageView alloc]  initWithImage:image];
+            view.center = self.view.center;
+            
+            [self.view addSubview:view];
+            
+        }
+
+    }
+    
+}
+
+
 #pragma mark - view lifecycle
 
 - (void)customInit {
+    
     self.title = self.playVsAI ? @"playVsAI" : @"playVsHuman";
+    [self drawGameField];
+    
 }
 
 - (void)viewDidLoad {
