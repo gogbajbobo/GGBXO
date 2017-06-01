@@ -19,17 +19,34 @@
     
     UIImage *image = [UIImage imageNamed:@"XO.png"];
     
+    CGFloat imageW = image.size.width;
+    CGFloat imageH = image.size.height;
+    
     CGFloat paddingX = image.size.width / 4;
     CGFloat paddingY = image.size.height / 4;
-    NSUInteger fieldHeight = 3;
-    NSUInteger fieldWidth = 3;
+    NSUInteger fieldXCount = 3;
+    NSUInteger fieldYCount = 3;
     
-    for (NSUInteger i = 0; i < fieldWidth; i++) {
+    CGFloat fieldWidth = imageW * fieldXCount + paddingX * (fieldXCount - 1);
+    CGFloat fieldHeight = imageH * fieldYCount + paddingY * (fieldYCount - 1);
+    
+    for (NSUInteger i = 0; i < fieldXCount; i++) {
 
-        for (NSUInteger j = 0; j < fieldHeight; j++) {
+        CGFloat x = (imageW + paddingX) * i;
+
+        for (NSUInteger j = 0; j < fieldYCount; j++) {
+
+            CGFloat y = (imageH + paddingY) * j;
+
+            CGFloat viewX = self.view.center.x + x - (fieldWidth - imageW) / 2;
+            CGFloat viewY = self.view.center.y + y - (fieldHeight - imageH) / 2;
+            
+            CGPoint center = CGPointMake(viewX, viewY);
+            
+            NSLog(@"center %@ %@", @(center.x), @(center.y));
             
             UIImageView *view = [[UIImageView alloc]  initWithImage:image];
-            view.center = self.view.center;
+            view.center = center;
             
             [self.view addSubview:view];
             
