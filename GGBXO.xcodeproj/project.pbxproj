@@ -15,6 +15,9 @@
 		2C6980321EDF1112006E50FC /* GGBXOUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C6980311EDF1112006E50FC /* GGBXOUITests.m */; };
 		2C6980411EDF1173006E50FC /* GGBXOStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C6980401EDF1173006E50FC /* GGBXOStoryboard.storyboard */; };
 		2C69804A1EE00247006E50FC /* BBGXOGameVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C6980491EE00247006E50FC /* BBGXOGameVC.m */; };
+		2C6980501EE002E3006E50FC /* XO.png in Resources */ = {isa = PBXBuildFile; fileRef = 2C69804D1EE002E3006E50FC /* XO.png */; };
+		2C6980511EE002E3006E50FC /* XOO.png in Resources */ = {isa = PBXBuildFile; fileRef = 2C69804E1EE002E3006E50FC /* XOO.png */; };
+		2C6980521EE002E3006E50FC /* XOX.png in Resources */ = {isa = PBXBuildFile; fileRef = 2C69804F1EE002E3006E50FC /* XOX.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +57,9 @@
 		2C6980451EDF1196006E50FC /* GGBPlayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GGBPlayer.h; sourceTree = "<group>"; };
 		2C6980481EE00247006E50FC /* BBGXOGameVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BBGXOGameVC.h; sourceTree = "<group>"; };
 		2C6980491EE00247006E50FC /* BBGXOGameVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBGXOGameVC.m; sourceTree = "<group>"; };
+		2C69804D1EE002E3006E50FC /* XO.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = XO.png; sourceTree = "<group>"; };
+		2C69804E1EE002E3006E50FC /* XOO.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = XOO.png; sourceTree = "<group>"; };
+		2C69804F1EE002E3006E50FC /* XOX.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = XOX.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -190,6 +196,9 @@
 		2C69804C1EE00272006E50FC /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				2C69804D1EE002E3006E50FC /* XO.png */,
+				2C69804E1EE002E3006E50FC /* XOO.png */,
+				2C69804F1EE002E3006E50FC /* XOX.png */,
 			);
 			path = Images;
 			sourceTree = "<group>";
@@ -303,7 +312,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2C6980501EE002E3006E50FC /* XO.png in Resources */,
 				2C69801C1EDF1111006E50FC /* LaunchScreen.storyboard in Resources */,
+				2C6980511EE002E3006E50FC /* XOO.png in Resources */,
+				2C6980521EE002E3006E50FC /* XOX.png in Resources */,
 				2C6980411EDF1173006E50FC /* GGBXOStoryboard.storyboard in Resources */,
 				2C6980191EDF1111006E50FC /* Assets.xcassets in Resources */,
 			);
