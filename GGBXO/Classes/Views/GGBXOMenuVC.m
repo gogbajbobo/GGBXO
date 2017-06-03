@@ -18,6 +18,28 @@
 @implementation GGBXOMenuVC
 
 
+#pragma mark - UIDebuggingInformationOverlay
+
+
+- (void)showDebuggingInformationOverlay {
+
+    Class UIDebuggingInformationOverlay = NSClassFromString(@"UIDebuggingInformationOverlay");
+    
+    SEL prepareDebuggingOverlaySelector = NSSelectorFromString(@"prepareDebuggingOverlay");
+    
+    [UIDebuggingInformationOverlay performSelector:prepareDebuggingOverlaySelector];
+    
+    SEL overlaySelector = NSSelectorFromString(@"overlay");
+    
+    id overlay = [UIDebuggingInformationOverlay performSelector:overlaySelector];
+    
+    SEL toggleVisibilitySelector = NSSelectorFromString(@"toggleVisibility");
+    
+    [overlay performSelector:toggleVisibilitySelector];
+    
+}
+
+
 #pragma mark - view lifecycle
 
 - (void)customInit {
@@ -29,6 +51,8 @@
     
     self.navigationItem.backBarButtonItem = backButton;
 
+    [self showDebuggingInformationOverlay];
+    
 }
 
 - (void)viewDidLoad {
