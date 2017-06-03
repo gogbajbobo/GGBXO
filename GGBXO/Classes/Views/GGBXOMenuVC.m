@@ -23,6 +23,9 @@
 
 - (void)showDebuggingInformationOverlay {
 
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Warc-performSelector-leaks"
+
     Class UIDebuggingInformationOverlay = NSClassFromString(@"UIDebuggingInformationOverlay");
     
     SEL prepareDebuggingOverlaySelector = NSSelectorFromString(@"prepareDebuggingOverlay");
@@ -36,6 +39,8 @@
     SEL toggleVisibilitySelector = NSSelectorFromString(@"toggleVisibility");
     
     [overlay performSelector:toggleVisibilitySelector];
+
+#pragma clang diagnostic pop
     
 }
 
